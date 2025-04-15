@@ -1,0 +1,101 @@
+.member-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .member-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .member-info {
+    padding: 1.5rem;
+  }
+  
+  .member-info h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-text);
+  }
+  
+  .role {
+    color: var(--accent-color);
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  
+  .branch {
+    color: var(--secondary-text);
+    margin-bottom: 1rem;
+  }
+  
+  .view-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-btn:hover {
+    background-color: var(--accent-hover);
+  }
+  
+  /* Compact version */
+  .member-card.compact {
+    display: flex;
+    height: 100%;
+    margin: 10px;
+  }
+  
+  .member-card.compact .member-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 1rem;
+  }
+  
+  .member-card.compact .member-info {
+    flex: 1;
+  }
+  
+  .member-card.compact .projects {
+    margin-top: 0.5rem;
+  }
+  
+  .member-card.compact .projects h4 {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    margin-bottom: 0.3rem;
+  }
+  
+  .member-card.compact .projects ul {
+    list-style-type: none;
+  }
+  
+  .member-card.compact .projects li {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    margin-bottom: 0.2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .member-card.compact {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .member-card.compact .member-image {
+      margin: 1rem auto;
+    }
+  }

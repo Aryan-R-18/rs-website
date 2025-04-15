@@ -1,0 +1,149 @@
+.project-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.project-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-status {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.status-in-progress {
+  background: rgba(0, 229, 255, 0.2);
+  backdrop-filter: blur(5px);
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+
+.status-completed {
+  background: rgba(76, 175, 80, 0.2);
+  backdrop-filter: blur(5px);
+  color: #4caf50;
+  border: 1px solid #4caf50;
+}
+
+.project-info {
+  padding: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.project-description {
+  color: var(--secondary-text);
+  margin-bottom: 25px;
+  flex: 1;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.tech-tag {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.project-link {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* Responsive Project Cards */
+@media (max-width: 1600px) {
+  .project-image-container {
+    height: 280px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .project-info {
+    padding: 25px;
+  }
+  
+  .project-info h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .project-image-container {
+    height: 250px;
+  }
+  
+  .project-info {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .project-info h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .project-image-container {
+    height: 220px;
+  }
+  
+  .project-info {
+    padding: 18px;
+  }
+  
+  .project-info h3 {
+    font-size: 1.4rem;
+  }
+  
+  .project-description {
+    font-size: 0.95rem;
+  }
+}

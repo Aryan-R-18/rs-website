@@ -1,0 +1,101 @@
+.hero {
+  height: 100vh;
+  width:100vw;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('/images/hero-bg.jpg') no-repeat center center/cover;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  color: var(--secondary-text);
+  animation: fadeInUp 1s ease 0.2s forwards;
+  opacity: 0;
+}
+
+.hero .btn {
+  animation: fadeInUp 1s ease 0.4s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Hero */
+@media (max-width: 1600px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  .hero p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    min-height: 700px;
+  }
+  
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  .hero-content {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+}
