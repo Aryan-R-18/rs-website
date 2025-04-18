@@ -6,6 +6,9 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  padding: 10px;  /*added*/
+  margin-bottom: 15px; /*added*/
+  
 }
 
 .competition-card:hover {
@@ -48,6 +51,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  
 }
 
 .competition-info h3 {

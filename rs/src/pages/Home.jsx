@@ -46,34 +46,34 @@ const Home = () => {
   const workshops = [
     {
       id: 1,
-      title: 'Introduction to ROS',
-      date: '15 March 2023',
-      description: 'Hands-on workshop on Robot Operating System fundamentals.',
-      image: '/images/workshop1.jpg'
+      title: 'Robotics Bootcamp',
+      date: '17 March 2025',
+      description: 'Hands-on Bootcamp on differentdomains of Robotics for the purpose of Induction.',
+      image: '/images/w1.jpg'
     },
     {
       id: 2,
-      title: 'CAD for Robotics',
-      date: '5 April 2023',
-      description: 'Learn to design robotic components using Fusion 360.',
-      image: '/images/workshop2.jpg'
+      title: 'RoboXplore',
+      date: '8 April 2025',
+      description: 'Making of Line follower bot and sharing knowledge on Arduino',
+      image: '/images/w2.jpg'
     }
   ];
 
   const competitions = [
     {
       id: 1,
-      name: 'National Robotics Challenge',
-      year: '2023',
-      achievement: '1st Place - Autonomous Vehicle',
-      image: '/images/competition1.jpg'
+      name: 'Smart India Hackathon',
+      year: '2024',
+      achievement: 'Finalists',
+      image: '/images/comp2.jpg'
     },
     {
       id: 2,
-      name: 'International RoboSub',
-      year: '2022',
-      achievement: 'Finalist - Underwater Robotics',
-      image: '/images/competition2.jpg'
+      name: 'Innovision at NIT Rourkela',
+      year: '2024',
+      achievement: 'Winner',
+      image: '/images/comp1.jpg'
     }
   ];
 
