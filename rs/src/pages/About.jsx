@@ -10,19 +10,14 @@ const About = () => {
         <section className="about-section">
           <h2>Our Mission</h2>
           <p>
-            The Robotics Society is dedicated to fostering innovation and excellence in robotics 
-            through hands-on projects, workshops, and competitions. We aim to provide students 
-            with the skills and experience needed to excel in the field of robotics and automation.
+          Developing new ideas in the field of Robotics and Technology to enable students to learn new Technologies, assimilate appropriate skills creating innovations which solve real world problems and improve the quality of life by training them with strength of character, leadership and self-attainment.
           </p>
         </section>
         
         <section className="about-section">
           <h2>Our History</h2>
           <p>
-            Founded in 2010, the Robotics Society has grown from a small group of enthusiasts 
-            to a premier organization with over 100 active members. We've participated in 
-            numerous national and international competitions, winning several awards for our 
-            innovative designs.
+          The Robotics Club is an OFFICIAL TECHNICAL club of VSSUT, Burla which encourages various technical activities and projects in the field of amateur as well as advanced Robotics, in the University. The members are a bunch of budding technocrats who are driven by an acute zest for learning technological advancements and happenings in the modern world, and endeavour in applying the theoretical learning into realistic projects.
           </p>
         </section>
         
