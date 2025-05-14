@@ -6,6 +6,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  padding: 10px;  /*added*/
+  margin-bottom: 15px; /*added*/
 }
 
 .project-card:hover {

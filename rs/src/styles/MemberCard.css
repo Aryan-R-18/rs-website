@@ -4,6 +4,8 @@
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    padding: 10px;  /*added*/
+    margin-bottom: 20px; /*added*/
   }
   
   .member-card:hover {

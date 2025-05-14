@@ -8,9 +8,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container">
-        <Link to="/" className="logo">
-          Robotics Society
-        </Link>
+      <Link to="/" className="logo">
+        <img src="/images/RS LOGO.png" alt="Robotics Society Logo" className="logo-img" />
+      </Link>
         
         <div className={`nav-links ${isOpen ? 'active' : ''}`}>
           <Link to="/">Home</Link>
