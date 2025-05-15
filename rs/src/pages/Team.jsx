@@ -922,15 +922,18 @@ const Team = () => {
             <div className="detail-info">
               <h2>{selectedMember.name}</h2>
               <p className="role">{selectedMember.role}</p>
+
               <div className="detail-section">
                 <h3>About</h3>
                 <p>{selectedMember.bio}</p>
               </div>
+
               <div className="detail-section">
                 <h3>Academic Information</h3>
                 <p><strong>Branch:</strong> {selectedMember.branch}</p>
                 <p><strong>Year:</strong> {selectedMember.year}</p>
               </div>
+
               <div className="detail-section">
                 <h3>Current Projects</h3>
                 <ul>
@@ -939,6 +942,7 @@ const Team = () => {
                   ))}
                 </ul>
               </div>
+
               <div className="detail-section">
                 <h3>Skills</h3>
                 <div className="skills">
@@ -947,6 +951,7 @@ const Team = () => {
                   ))}
                 </div>
               </div>
+
               <div className="detail-section">
                 <h3>Connect</h3>
                 <div className="social-links">
@@ -1006,12 +1011,7 @@ const Team = () => {
           </div>
 
           <div className="team-grid">
-
-            {filteredMembers.map(member => (
-
-            {teamMembers.map(member => (
-              //Yeh React ko bolta hai: “MemberCard ko ek prop bhej raha hoon jiska naam member hai, aur uski value member object hai.”
-
+            {(activeFilter ? filteredMembers : teamMembers).map(member => (
               <MemberCard 
                 key={member.id} 
                 member={member} 
