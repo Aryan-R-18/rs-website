@@ -1006,7 +1006,12 @@ const Team = () => {
           </div>
 
           <div className="team-grid">
+
             {filteredMembers.map(member => (
+
+            {teamMembers.map(member => (
+              //Yeh React ko bolta hai: “MemberCard ko ek prop bhej raha hoon jiska naam member hai, aur uski value member object hai.”
+
               <MemberCard 
                 key={member.id} 
                 member={member} 

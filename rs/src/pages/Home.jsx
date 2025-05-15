@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ProjectCard from '../components/ProjectCard';
 import MemberCard from '../components/MemberCard';
-import WorkshopCard from '../components/WorkshopCard';
 import CompetitionCard from '../components/CompetitionCard';
 import '../styles/Home.css';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 const Home = () => {
   const latestProjects = [
@@ -24,31 +25,12 @@ const Home = () => {
     }
   ];
 
-  const teamMembers = [
-    {
-      id: 1,
-      name: 'Alex Johnson',
-      role: 'Team Lead',
-      branch: 'Mechanical Engineering',
-      projects: ['Autonomous Rover', 'Drone Navigation'],
-      image: '/images/member1.jpg'
-    },
-    {
-      id: 2,
-      name: 'Sarah Chen',
-      role: 'Software Lead',
-      branch: 'Computer Science',
-      projects: ['Robotic Arm', 'AI Vision'],
-      image: '/images/member2.jpg'
-    }
-  ];
-
   const workshops = [
     {
       id: 1,
       title: 'Robotics Bootcamp',
       date: '17 March 2025',
-      description: 'Hands-on Bootcamp on differentdomains of Robotics for the purpose of Induction.',
+      description: 'Hands-on Bootcamp on different domains of Robotics for the purpose of Induction.',
       image: '/images/w1.jpg'
     },
     {
@@ -84,8 +66,8 @@ const Home = () => {
           <h1>Innovating the Future of Robotics</h1>
           <p>Join us in building cutting-edge robotic solutions to real-world problems.</p>
           <Link to="/about" className="btn">
-          Learn More
-        </Link>
+            Learn More
+          </Link>
         </div>
       </section>
 
@@ -100,25 +82,29 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="team-projects">
-        <div className="container">
-          <h2 className="section-title">Who's Working On What</h2>
-          <div className="card-grid">
-            {teamMembers.map(member => (
-              <MemberCard key={member.id} member={member} compact />
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="workshops">
         <div className="container">
           <h2 className="section-title">Workshops Conducted</h2>
-          <div className="card-grid">
+          <Carousel
+            showArrows={true}
+            autoPlay
+            infiniteLoop
+            showThumbs={false}
+            className="workshop-carousel"
+          >
             {workshops.map(workshop => (
-              <WorkshopCard key={workshop.id} workshop={workshop} />
+              <div key={workshop.id}>
+                <Link to={`/workshops/${workshop.id}`}>
+                  <img src={workshop.image} alt={workshop.title} />
+                  <div className="legend">
+                    <h3>{workshop.title}</h3>
+                    <p>{workshop.description}</p>
+                    <small>{workshop.date}</small>
+                  </div>
+                </Link>
+              </div>
             ))}
-          </div>
+          </Carousel>
         </div>
       </section>
 
