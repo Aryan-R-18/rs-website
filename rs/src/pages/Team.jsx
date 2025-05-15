@@ -80,6 +80,7 @@ const Team = () => {
         ) : (
           <div className="team-grid">
             {teamMembers.map(member => (
+              //Yeh React ko bolta hai: “MemberCard ko ek prop bhej raha hoon jiska naam member hai, aur uski value member object hai.”
               <MemberCard 
                 key={member.id} 
                 member={member} 

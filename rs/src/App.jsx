@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Team from './pages/Team';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import WorkshopDetail from './pages/WorkshopDetail.jsx';
 import './styles/global.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/team" element={<Team />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+             <Route path="/workshops/:id" element={<WorkshopDetail />} />
           </Routes>
         </main>
         <Footer />
