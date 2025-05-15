@@ -86,7 +86,7 @@ section {
     max-width: 1000px;
     padding: 0 30px;
   }
-  
+
   .section-title {
     font-size: 2.5rem;
   }
@@ -96,7 +96,7 @@ section {
   .container {
     max-width: 800px;
   }
-  
+
   section {
     padding: 60px 0;
   }
@@ -106,12 +106,12 @@ section {
   .container {
     padding: 0 20px;
   }
-  
+
   .section-title {
     font-size: 2.2rem;
     margin-bottom: 40px;
   }
-  
+
   .btn {
     padding: 12px 30px;
     font-size: 1rem;
@@ -122,8 +122,75 @@ section {
   .section-title {
     font-size: 2rem;
   }
-  
+
   .container {
     padding: 0 15px;
   }
+}
+
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0, 0, 0);
+  z-index: 2;
+}
+
+.loader-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.page-content {
+  min-height: 100vh;
+}
+
+.page-animate {
+  animation: fadeSlideIn 0.5s ease forwards;
+}
+
+.page-hidden {
+  opacity: 0;
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.notfound-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  z-index: 2;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.notfound-animation {
+  width: 400px;
+  height: 400px;
+}
+
+.notfound-text {
+  font-size: 24px;
+  color: #979696;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
