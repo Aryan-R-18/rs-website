@@ -8,12 +8,22 @@
   margin-right: -50vw;
   padding: 80px 0; 
 }
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+  color: var(--accent-color);
+  margin-top: 90px;
+}
+
 .team-container {
   width: 100vw;
-  
   margin: 0 auto;
-  padding: 0 20px; /* Side padding for content */
+  padding: 0 20px;
 }
+
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -111,13 +121,60 @@
   color: var(--primary-bg);
 }
 
+/* Filter Buttons for Classifying into Years */
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.filter-buttons button {
+  background: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.filter-buttons button:hover {
+  background: var(--accent-color);
+  color: var(--primary-bg);
+}
+
+.filter-buttons .active-filter {
+  background: var(--accent-color);
+  color: var(--primary-bg);
+}
+
+/* Icons */
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.icon-link {
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.icon-link:hover {
+  color: #0077b5;
+}
+
 /* Responsive Team Section */
 @media (max-width: 1600px) {
   .team-grid {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
   }
-  
+
   .member-image-container {
     height: 320px;
   }
@@ -127,11 +184,11 @@
   .member-image-container {
     height: 300px;
   }
-  
+
   .member-info {
     padding: 25px;
   }
-  
+
   .member-info h3 {
     font-size: 1.7rem;
   }
@@ -142,7 +199,7 @@
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 25px;
   }
-  
+
   .member-image-container {
     height: 280px;
   }
@@ -153,7 +210,7 @@
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 20px;
   }
-  
+
   .member-info h3 {
     font-size: 1.6rem;
   }
@@ -166,12 +223,136 @@
     margin: 0 auto;
     gap: 30px;
   }
-  
+
   .member-image-container {
     height: 350px;
   }
-  
+
   .member-info {
     padding: 25px 20px;
+  }
+}
+
+
+/* 🔥 Detailed Member View Styling */
+.member-detail {
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  animation: fadeIn 0.5s ease;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .detail-content {
+    flex-direction: row;
+  }
+}
+
+.detail-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.detail-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detail-info h2 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: var(--accent-color);
+}
+
+.role {
+  font-style: italic;
+  color: var(--secondary-text);
+  margin-bottom: 15px;
+}
+
+.detail-section {
+  background: var(--secondary-bg);
+  padding: 14px 18px;
+  border-left: 5px solid var(--accent-color);
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.detail-section h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: var(--accent-color);
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  background-color: #e1f0ff;
+  color: #007bff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.back-btn {
+  background-color: var(--accent-color);
+  color: var(--primary-bg);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 25px;
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #0056b3;
+}
+
+.social-links {
+  display: flex;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.icon-link {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-link:hover {
+  transform: scale(1.2);
+  color: #444;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
